@@ -1,16 +1,29 @@
+import raybanLogo from "@/assets/brands/rayban.png";
+import oakleyLogo from "@/assets/brands/oakley.png";
+import arnetteLogo from "@/assets/brands/arnette.png";
+import vogueLogo from "@/assets/brands/vogue.png";
+import pradaLogo from "@/assets/brands/prada.png";
+import dolceGabbanaLogo from "@/assets/brands/dolce-gabbana.png";
+import armaniLogo from "@/assets/brands/armani.png";
+import versaceLogo from "@/assets/brands/versace.png";
+import chilliBeansLogo from "@/assets/brands/chilli-beans.png";
+import mormaiiLogo from "@/assets/brands/mormaii.png";
+import hbLogo from "@/assets/brands/hb.png";
+import carreraLogo from "@/assets/brands/carrera.png";
+
 const brands = [
-  "Ray-Ban",
-  "Oakley",
-  "Arnette",
-  "Vogue",
-  "Prada",
-  "Dolce & Gabbana",
-  "Giorgio Armani",
-  "Versace",
-  "Chilli Beans",
-  "Mormaii",
-  "HB",
-  "Carrera",
+  { name: "Ray-Ban", logo: raybanLogo },
+  { name: "Oakley", logo: oakleyLogo },
+  { name: "Arnette", logo: arnetteLogo },
+  { name: "Vogue", logo: vogueLogo },
+  { name: "Prada", logo: pradaLogo },
+  { name: "Dolce & Gabbana", logo: dolceGabbanaLogo },
+  { name: "Giorgio Armani", logo: armaniLogo },
+  { name: "Versace", logo: versaceLogo },
+  { name: "Chilli Beans", logo: chilliBeansLogo },
+  { name: "Mormaii", logo: mormaiiLogo },
+  { name: "HB", logo: hbLogo },
+  { name: "Carrera", logo: carreraLogo },
 ];
 
 const Brands = () => {
@@ -33,9 +46,11 @@ const Brands = () => {
               className="group flex items-center justify-center p-8 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-soft transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <span className="text-xl font-poppins font-semibold text-muted-foreground group-hover:text-primary transition-colors">
-                {brand}
-              </span>
+              <img
+                src={brand.logo}
+                alt={`${brand.name} logo`}
+                className="w-full h-auto max-w-[120px] object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+              />
             </div>
           ))}
         </div>
