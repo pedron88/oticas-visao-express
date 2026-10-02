@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/lib/contact";
-import heroAsset from "@/assets/hero-nova-visao.png.asset.json";
+import heroAsset from "@/assets/hero-nova-visao.jpg.asset.json";
 
 const Hero = () => {
   return (
