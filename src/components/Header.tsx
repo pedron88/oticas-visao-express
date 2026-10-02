@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { WHATSAPP_URL } from "@/lib/contact";
 import { Button } from "@/components/ui/button";
 
