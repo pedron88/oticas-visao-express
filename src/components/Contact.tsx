@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock } from "lucide-react";
+import {
+  WHATSAPP_URL,
+  PHONE_DISPLAY,
+  MAPS_EMBED_SRC,
+  CITY,
+} from "@/lib/contact";
 
 const Contact = () => {
   return (
@@ -24,17 +30,13 @@ const Contact = () => {
                 <h3 className="font-poppins font-semibold text-lg text-foreground mb-2">
                   Endereço
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Rua das Flores, 123 - Centro
-                  <br />
-                  São Paulo - SP, 01234-567
-                </p>
+                <p className="text-muted-foreground leading-relaxed">{CITY}</p>
                 <Button
                   variant="link"
                   className="text-primary hover:text-primary/80 p-0 h-auto mt-2"
                   onClick={() =>
                     window.open(
-                      "https://www.google.com/maps/search/otica",
+                      "https://www.google.com/maps/search/oticas+nova+vis%C3%A3o+s%C3%A3o+luis",
                       "_blank"
                     )
                   }
@@ -50,12 +52,10 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-poppins font-semibold text-lg text-foreground mb-2">
-                  Telefone
+                  Telefone / WhatsApp
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  (11) 99999-9999
-                  <br />
-                  (11) 3333-3333
+                  {PHONE_DISPLAY}
                 </p>
               </div>
             </div>
@@ -79,12 +79,7 @@ const Contact = () => {
             </div>
 
             <Button
-              onClick={() =>
-                window.open(
-                  "https://wa.me/5511999999999?text=Olá! Gostaria de falar com um atendente.",
-                  "_blank"
-                )
-              }
+              onClick={() => window.open(WHATSAPP_URL, "_blank")}
               size="lg"
               className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-soft mt-4"
             >
@@ -94,14 +89,14 @@ const Contact = () => {
 
           <div className="rounded-2xl overflow-hidden shadow-medium h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0977!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAxLjkiUyA0NsKwMzgnMDAuMiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+              src={MAPS_EMBED_SRC}
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Óticas Nova Visão"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Localização Óticas Nova Visão - São Luís"
             />
           </div>
         </div>
