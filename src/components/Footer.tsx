@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Facebook, Instagram, Twitter, ChevronDown, Tag } from "lucide-react";
+import { Facebook, Instagram, MessageCircle, ChevronDown, Tag } from "lucide-react";
+import { WHATSAPP_URL, INSTAGRAM_URL } from "@/lib/contact";
 
 const brandDescription = `Na Nova Visão, acreditamos que cuidar da visão também é cuidar do seu conforto, bem-estar e estilo. Somos uma ótica em São Luís, oferecendo óculos de grau, óculos de sol, armações e lentes para diferentes necessidades e preferências.
 
@@ -122,25 +123,29 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Twitter"
+                aria-label="Facebook"
               >
-                <Twitter className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>

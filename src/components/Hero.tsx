@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-person.jpg";
+import { WHATSAPP_URL } from "@/lib/contact";
+import heroAsset from "@/assets/hero-nova-visao.jpg.asset.json";
 
 const Hero = () => {
-  const handleWhatsAppClick = () => {
-    window.open(
-      "https://wa.me/5511999999999?text=Olá! Gostaria de agendar um exame de vista.",
-      "_blank"
-    );
-  };
-
   return (
     <section
       id="inicio"
@@ -25,7 +19,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button
-              onClick={handleWhatsAppClick}
+              onClick={() => window.open(WHATSAPP_URL, "_blank")}
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-medium"
             >
@@ -47,8 +41,8 @@ const Hero = () => {
         <div className="relative animate-slide-up">
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 blur-3xl opacity-30 rounded-3xl" />
           <img
-            src={heroImage}
-            alt="Pessoa feliz usando óculos modernos"
+            src={heroAsset.url}
+            alt="Clientes da Óticas Nova Visão usando óculos"
             className="relative rounded-3xl shadow-medium w-full h-auto object-cover"
           />
         </div>

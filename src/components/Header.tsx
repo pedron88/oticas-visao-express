@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { WHATSAPP_URL } from "@/lib/contact";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -66,12 +67,7 @@ const Header = () => {
         </nav>
 
         <Button
-          onClick={() =>
-            window.open(
-              "https://wa.me/5511999999999?text=Olá! Gostaria de agendar um exame de vista.",
-              "_blank"
-            )
-          }
+          onClick={() => window.open(WHATSAPP_URL, "_blank")}
           className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-soft"
         >
           Agendar Exame

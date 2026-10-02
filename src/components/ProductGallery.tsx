@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/lib/contact";
 import glasses1 from "@/assets/glasses-1.jpg";
 import glasses2 from "@/assets/glasses-2.jpg";
 import glasses3 from "@/assets/glasses-3.jpg";
@@ -53,12 +54,7 @@ const ProductGallery = () => {
 
         <div className="text-center">
           <Button
-            onClick={() =>
-              window.open(
-                "https://wa.me/5511999999999?text=Olá! Gostaria de conhecer todos os modelos disponíveis.",
-                "_blank"
-              )
-            }
+            onClick={() => window.open(WHATSAPP_URL, "_blank")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-soft"
           >
